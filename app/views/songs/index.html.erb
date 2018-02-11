@@ -30,4 +30,6 @@
 
 <%= link_to 'New Song', new_song_path %>
 
-<%= tag.div nil, id: 'map'  %>
+<%= tag.div nil, id: 'map', data: { songs: @songs.to_json(methods: [:address])}  %>
+
+
