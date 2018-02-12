@@ -13,14 +13,13 @@ document.addEventListener("turbolinks:load", function() {
     var bounds = new google.maps.LatLngBounds();
 
     songs.forEach(function(song){
-        console.log ('howdy')
         if (song.latitude && song.longitude) {
             var marker = map.addMarker({
                 lat: song.latitude,
                 lng: song.longitude,
-                title: song.adress,
+                title: song.address,
                 infoWindow: {
-                    content: '<iframe src="https://open.spotify.com/embed/track/5RStjc42UAYI2NMY3cYpgz" width="200" height="300" frameborder="0" allowtransparency="true"></iframe>'
+                    content: '<p>Hello ${song.address}</p><iframe src="https://open.spotify.com/embed/track/5RStjc42UAYI2NMY3cYpgz" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>'
                 }
             });
         bounds.extend(marker.position);

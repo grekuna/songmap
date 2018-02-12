@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'webpacker', '~> 3.2', '>= 3.2.1'
 
 gem 'geocoder', '~> 1.4', '>= 1.4.5'
+gem 'rspotify', '~> 1.27'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
