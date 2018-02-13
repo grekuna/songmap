@@ -12,32 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, class: "required" %>
     <%= form.text_field :name, id: :song_name %>
   </div>
 
   <div class="field">
-    <%= form.label :artist %>
+    <%= form.label :artist, class: "required" %>
     <%= form.text_field :artist, id: :song_artist %>
   </div>
 
   <div class="field">
-    <%= form.label :album %>
+    <%= form.label :album, class: "required" %>
     <%= form.text_field :album, id: :song_album %>
   </div>
 
   <div class="field">
-    <%= form.label :street %>
+    <%= form.label :street, class: "required" %>
     <%= form.text_field :street, id: :song_street %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
+    <%= form.label :city, class: "required" %>
     <%= form.text_field :city, id: :song_city %>
   </div>
 
   <div class="field">
-    <%= form.label :country %>
+    <%= form.label :country, class: "required" %>
     <%= form.text_field :country, id: :song_country %>
   </div>
 
