@@ -26,6 +26,14 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
 
+    RSpotify.authenticate(ENV['SPOTIFYCLIENTID'], ENV['SPOTIFYSECRET'])
+    tracks =  RSpotify::Track.search(@song.name)
+    if tracks.empty?
+      errors.add("We couldn't find the song on Spotify")
+    else
+      @song.spotifyurl = tracks.first.uri.split(":")[2]
+    end
+
     respond_to do |format|
       if @song.save
         format.html { redirect_to @song, notice: 'Song was successfully created.' }

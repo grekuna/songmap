@@ -11,6 +11,7 @@ document.addEventListener("turbolinks:load", function() {
     window.songs = songs;
 
     var bounds = new google.maps.LatLngBounds();
+    var contentstring
 
     songs.forEach(function(song){
         if (song.latitude && song.longitude) {
@@ -19,7 +20,7 @@ document.addEventListener("turbolinks:load", function() {
                 lng: song.longitude,
                 title: song.address,
                 infoWindow: {
-                    content: '<p>Hello ${song.address}</p><iframe src="https://open.spotify.com/embed/track/5RStjc42UAYI2NMY3cYpgz" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>'
+                    content: `<iframe src="https://open.spotify.com/embed/track/${song.spotifyurl}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>`
                 }
             });
         bounds.extend(marker.position);

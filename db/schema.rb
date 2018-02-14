@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212153241) do
+ActiveRecord::Schema.define(version: 20180213120251) do
 
   create_table "songs", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180212153241) do
     t.string "country"
     t.float "latitude"
     t.float "longitude"
+    t.string "spotifyurl"
   end
 
 end
