@@ -29,7 +29,7 @@ class SongsController < ApplicationController
     RSpotify.authenticate(ENV['SPOTIFYCLIENTID'], ENV['SPOTIFYSECRET'])
     tracks =  RSpotify::Track.search(@song.name)
     if tracks.empty?
-      errors.add("We couldn't find the song on Spotify")
+      flash[:notice] = "This track was not found"
     else
       @song.spotifyurl = tracks.first.uri.split(":")[2]
     end

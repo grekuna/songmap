@@ -1,6 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Songs</h1>
+<h1>Songmap</h1>
+
+<p>Thousands of songs have been written with street names in their title. This map shows you where the streets that influenced the songwriters are located. 
+  Explore the music or take a walk down the streets using Goolge Street View </p>
+
+
+<br>
+
+<p> Is your favorite song about a street missing? <%= link_to 'Please add it!', new_song_path %> </p>
+
+<%= tag.div nil, id: 'map', data: { songs: @songs.to_json(methods: [:address])}  %>
+
 
 <table>
   <thead>
@@ -25,11 +36,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Song', new_song_path %>
-
-<%= tag.div nil, id: 'map', data: { songs: @songs.to_json(methods: [:address])}  %>
-
-

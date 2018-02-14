@@ -7,11 +7,11 @@ document.addEventListener("turbolinks:load", function() {
 
     });
 
+
     var songs = JSON.parse(document.querySelector("#map").dataset.songs);
     window.songs = songs;
 
     var bounds = new google.maps.LatLngBounds();
-    var contentstring
 
     songs.forEach(function(song){
         if (song.latitude && song.longitude) {
@@ -27,5 +27,8 @@ document.addEventListener("turbolinks:load", function() {
         }
     });
     map.fitBounds(bounds);
+    // TO DO: Cluster Markers
+    // var markerCluster = new MarkerClusterer(map, songs);
+  
 });
 
