@@ -3,7 +3,7 @@ class Song < ApplicationRecord
     after_validation :geocode, if: :address_changed?
     after_validation :valid_address?
 
-    validates :street, :city, :country, :name, :album, :artist, presence: true
+    validates :street, :city, :country, :name, :artist, presence: true
     # validates :valid_address?
 
     def address
@@ -19,7 +19,7 @@ class Song < ApplicationRecord
 
   def valid_address?
     if latitude.blank? || longitude.blank?
-      errors.add(:address, "We couldn't find the address on Google Maps")
+      errors.add(:address, "We couldn't find the address on Google Maps. Please note that you have to write both city and country name in English.")
       return false
     else
       return true

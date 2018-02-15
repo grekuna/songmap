@@ -2,37 +2,22 @@
 
 <h1>Songmap</h1>
 
-<p>Thousands of songs have been written with street names in their title. This map shows you where the streets that influenced the songwriters are located. 
-  Explore the music or take a walk down the streets using Goolge Street View </p>
+<p>Thousands of songs have been written with street names in their title. This map the location of the streets that influenced the songwriters. 
+  Explore the music or take a walk down the iconic streets using Google Street View </p>
+
+
+<p>Tip: Use Google Chrome for the best experience and log into Spotify to listen to full tracks</p>
 
 
 <br>
 
-<p> Is your favorite song about a street missing? <%= link_to 'Please add it!', new_song_path %> </p>
+
 
 <%= tag.div nil, id: 'map', data: { songs: @songs.to_json(methods: [:address])}  %>
 
+<h1>Add your favorite Song</h1>
+<p> Is your favorite song about a street missing? Please add it!</p>
+<%= render 'form', song: Song.new %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Artist</th>
-      <th>Album</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= song.name %></td>
-        <td><%= song.artist %></td>
-        <td><%= song.album %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+

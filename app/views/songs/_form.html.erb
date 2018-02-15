@@ -11,14 +11,16 @@
     </div>
   <% end %>
 
+  <h3>Song Information</h3>
+
   <div class="field">
-    <%= form.label :name, class: "required" %>
-    <%= form.text_field :name, id: :song_name %>
+    <%= form.label "Song Title", class: "required" %>
+    <%= form.text_field :name, id: :song_name, placeholder: "e.g. Penny Lane" %>
   </div>
 
   <div class="field">
     <%= form.label :artist, class: "required" %>
-    <%= form.text_field :artist, id: :song_artist %>
+    <%= form.text_field :artist, id: :song_artist, placeholder: "e.g. The Beatles" %>
   </div>
 
   <div class="field">
@@ -26,22 +28,24 @@
     <%= form.text_field :album, id: :song_album %>
   </div>
 
+  <h3>Song Location</h3>
+
   <div class="field">
     <%= form.label :street, class: "required" %>
-    <%= form.text_field :street, id: :song_street %>
+    <%= form.text_field :street, id: :song_street, placeholder: "e.g. Penny Lane" %>
   </div>
 
   <div class="field">
     <%= form.label :city, class: "required" %>
-    <%= form.text_field :city, id: :song_city %>
+    <%= form.text_field :city, id: :song_city, placeholder: "e.g. Liverpool" %>
   </div>
 
   <div class="field">
     <%= form.label :country, class: "required" %>
-    <%= form.text_field :country, id: :song_country %>
+    <%= form.text_field :country, id: :song_country, placeholder: "e.g. UK"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Add song to map" %>
   </div>
 <% end %>

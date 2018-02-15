@@ -5,6 +5,7 @@ class SongsController < ApplicationController
   # GET /songs.json
   def index
     @songs = Song.all
+
   end
 
   # GET /songs/1
@@ -27,7 +28,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
 
     RSpotify.authenticate(ENV['SPOTIFYCLIENTID'], ENV['SPOTIFYSECRET'])
-    tracks =  RSpotify::Track.search(@song.name)
+    tracks =  RSpotify::Track.search(@song.name+" "+@song.artist)
     if tracks.empty?
       flash[:notice] = "This track was not found"
     else
