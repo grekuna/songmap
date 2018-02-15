@@ -5,6 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
+##Ruby Version
+* Ruby 2.3.3
+
+##Rails Version
+* Rails 5.1.4
+
+
+##System Dependencies: 
+* Postgesql
+* Node.js 6.0.0+
+* Yarn 0.25.2+
+
 * Ruby version
 
 * System dependencies
@@ -17,8 +29,7 @@ Things you may want to cover:
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##License
+All the sources created are made available under the terms of the GNU Affero General Public License (GNU AGPLv3). See the GNU-AGPL-3.0.txt file for more details.
 
-* Deployment instructions
 
-* ...
