@@ -1,10 +1,11 @@
 body {
-  background-color: #fff;
+  background-color: #cecece;
   color: #333;
   margin: 33px;
   font-family: Courier New, Courier, monospace;
   font-size: 18px;
   line-height: 27px;
+  margin: 0 20px 0; 
 }
 
 p, ol, ul, td {
@@ -15,8 +16,8 @@ p, ol, ul, td {
 
 h1 {
   font-family: Amatic SC;
-  font-size: 54px;
-  line-height: 54px;
+  font-size: 80px;
+  line-height: 50px;
 }
 
 pre {
@@ -87,4 +88,23 @@ div {
 
 label {
   display: block;
+}
+
+
+.button {
+  font-family: Courier New, Courier, monospace;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 20px;
+}
+
+.white {
+  padding: 40px; 
+  background-color: #fff;
+  
+  &.bottom {
+    padding: 5px 40px 5px;
+     
+  }
+
 }

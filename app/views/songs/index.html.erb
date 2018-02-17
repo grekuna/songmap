@@ -1,23 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1 style="font-family: 'Amatic SC'">Songmap</h1>
 
-<p style="font-family:Courier New, Courier, monospace ">Thousands of songs have been written with street names in their title. This map locates the streets that influenced the songwriters. 
-  Explore the music by clicking on the markers or take a walk down the iconic streets using Google Street View </p>
+<div class="white">
+  <h1 style="font-family: 'Amatic SC'">Songmap <%= image_tag("logo.png", height: "70px") %> </h1>
 
-
-<p>Tip: Use Google Chrome for the best experience and log into Spotify to listen to full tracks</p>
-
-
-<br>
+  <p style="font-family:Courier New, Courier, monospace ">Thousands of songs have been written with street names in their title. This map locates the streets that influenced the songwriters. 
+    Explore the music by clicking on the markers or take a walk down the iconic streets using Google Street View </p>
 
 
+  <p>Tip: Use Google Chrome for the best experience and log into Spotify to listen to full tracks</p>
+
+
+
+  <br>
+</div>
+<div style="height: 10px"></div>
 
 <%= tag.div nil, id: 'map', data: { songs: @songs.to_json(methods: [:address])}  %>
+<div style="height: 10px"></div>
 
-<h1>Add your favorite Song</h1>
-<p> Is your favorite song about a street missing? Please add it!</p>
-<%= render 'form', song: Song.new %>
+
+<div class="white">
+  <h3>Add your favorite Song!</h3>
+  <p> Is your favorite song about a street missing? Please add it!</p>
+  <%= render 'form', song: Song.new %>
+</div>
+
+<div style="height: 10px"></div>
+<div class="white bottom">
+  <p style="font-size: 12px;"> This app is made available under a GNU AGPLv3, see source on <a href="https://github.com/grekuna/songmap"><i class='fa fa-github'></i></a>, logo is a dervative of <a href="https://www.flaticon.com/authors/pixel-perfect">pixel-perfect</a></p>
+</div>
+<div style="height: 10px"></div>
 
 
 
