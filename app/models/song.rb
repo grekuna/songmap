@@ -2,12 +2,13 @@ class Song < ApplicationRecord
     geocoded_by :address 
     after_validation :geocode, if: :address_changed?
     after_validation :valid_address?
+    after_validation :valid_song?
 
     validates :street, :city, :country, :name, :artist, presence: true
     # validates :valid_address?
 
     def address
-      [street, city, zip, state, country].compact.join(", ")
+      [street, city, country].compact.join(", ")
     end
 
 
@@ -25,6 +26,14 @@ class Song < ApplicationRecord
       return true
     end
   end
-  
+
+  def valid_song?
+    if spotifyurl.blank?
+      errors.add(:name, "We couldn't find the song on Spotify. Please make sure song title and artist are spelled correct.")
+      return false
+    else
+      return true
+    end
+  end
 
 end

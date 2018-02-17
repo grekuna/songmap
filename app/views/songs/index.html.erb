@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div >
+  <h2 class="flash"><%= flash[:error] unless flash[:error].blank? %></h2>
+</div>
 
 <div class="white">
   <h1 style="font-family: 'Amatic SC'">Songmap <%= image_tag("logo.png", height: "70px") %> </h1>
@@ -23,7 +26,7 @@
 <div class="white">
   <h3>Add your favorite Song!</h3>
   <p> Is your favorite song about a street missing? Please add it!</p>
-  <%= render 'form', song: Song.new %>
+  <%= render 'form', song: @song %>
 </div>
 
 <div style="height: 10px"></div>
