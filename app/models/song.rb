@@ -12,7 +12,7 @@ class Song < ApplicationRecord
 
 
   def address_changed?
-    street_changed? || city_changed? || zip_changed? || state_changed? || country_changed?
+    street_changed? || city_changed? || country_changed?
   end
 
   
