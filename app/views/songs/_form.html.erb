@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <p><b>Song Information:</b></p>
+  <p class="formtitle">Song Information:</p>
 
   <div class="field">
     <%= form.label "Song Title", class: "required" %>
@@ -24,7 +24,7 @@
   </div>
 
 
-  <p><b>Song Location:</b></p>
+  <p class="formtitle">Song Location:</p>
 
   <div class="field">
     <%= form.label :street, class: "required" %>
@@ -42,6 +42,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Add song to map", class: "button" %>
+    <%= form.submit "Add song to map", class: "btn" %>
   </div>
 <% end %>

@@ -5,6 +5,8 @@ document.addEventListener("turbolinks:load", function() {
     lat: 38.5816,
     lng: -121.4944
 
+
+
     });
 
 
@@ -13,6 +15,7 @@ document.addEventListener("turbolinks:load", function() {
 
     var bounds = new google.maps.LatLngBounds();
 
+    var markers = [];
     songs.forEach(function(song){
         if (song.latitude && song.longitude) {
             var marker = map.addMarker({
@@ -23,12 +26,17 @@ document.addEventListener("turbolinks:load", function() {
                     content: `<iframe src="https://open.spotify.com/embed/track/${song.spotifyurl}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>`
                 }
             });
-        bounds.extend(marker.position);
+            //to be used for clustering
+            markers.push(marker);
+            bounds.extend(marker.position);
         }
     });
     map.fitBounds(bounds);
-    // TO DO: Cluster Markers
-    // var markerCluster = new MarkerClusterer(map, songs);
-  
+
+    var options = {
+        imagePath: '../../../assets/images'
+    };
+    var markerCluster = new MarkerClusterer(map, markers, options);
+
 });
 
