@@ -1,12 +1,18 @@
 document.addEventListener("turbolinks:load", function() {
+
+
     
     var map = new GMaps({
-    div: '#map',
-    lat: 38.5816,
-    lng: -121.4944
-
-
-
+        div: '#map',
+        lat: 38.5816,
+        lng: -121.4944
+        // markerClusterer: function(map) {
+        //     options = {
+        //       gridSize: 40
+        //     }
+   
+        //     return new MarkerClusterer(map, [], options);
+        //   }
     });
 
 
@@ -25,9 +31,10 @@ document.addEventListener("turbolinks:load", function() {
                 infoWindow: {
                     content: `<iframe src="https://open.spotify.com/embed/track/${song.spotifyurl}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>`
                 }
+                
             });
-            //to be used for clustering
             markers.push(marker);
+            window.markers = markers;
             bounds.extend(marker.position);
         }
     });
@@ -36,7 +43,8 @@ document.addEventListener("turbolinks:load", function() {
     var options = {
         imagePath: '../../../assets/images'
     };
-    var markerCluster = new MarkerClusterer(map, markers, options);
+  
+    // var markerCluster = new MarkerClusterer(map, markers, options);
 
 });
 
