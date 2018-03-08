@@ -20,7 +20,7 @@ class Song < ApplicationRecord
 
   def valid_address?
     if latitude.blank? || longitude.blank?
-      errors.add(:address, "We couldn't find the address on Google Maps. Please note that you have to write both city and country name in English.")
+      errors.add(:address, "We couldn't find the address on Google Maps. Please note that you have to write both city and country name in English. And please try again, Google seems to be moody at times with looking up addresses.")
       return false
     else
       return true
@@ -29,7 +29,7 @@ class Song < ApplicationRecord
 
   def valid_song?
     if spotifyurl.blank?
-      errors.add(:name, "We couldn't find the song on Spotify. Please make sure song title and artist are spelled correct.")
+      errors.add(:name, "We couldn't find the song on Spotify. Please make sure song title and artist are spelled correct. And please try again, Spotify seems to be moody at times with looking up songs.")
       return false
     else
       return true

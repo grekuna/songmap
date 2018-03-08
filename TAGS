@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+AddAdressToSongs	db/migrate/20180211180258_add_adress_to_songs.rb	/^class AddAdressToSongs < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+AddCoordinatesToSongs	db/migrate/20180211181711_add_coordinates_to_songs.rb	/^class AddCoordinatesToSongs < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+AddSongurltoSong	db/migrate/20180212153241_add_songurlto_song.rb	/^class AddSongurltoSong < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Songmap	inherits:Rails.Application
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c	inherits:ActionController.Base
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c	inherits:ActiveJob.Base
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c	inherits:ActionMailer.Base
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c	inherits:ActiveRecord.Base
+ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c	inherits:ActionDispatch.SystemTestCase
+ChangeDataTypeForArtist	db/migrate/20180211194701_change_data_type_for_artist.rb	/^class ChangeDataTypeForArtist < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable	inherits:ActionCable.Channel.Base
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable	inherits:ActionCable.Connection.Base
+CreateSongs	db/migrate/20180211125039_create_songs.rb	/^class CreateSongs < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+RemoveDetailsfromSong	db/migrate/20180217111201_remove_detailsfrom_song.rb	/^class RemoveDetailsfromSong < ActiveRecord::Migration[5.1]$/;"	c	inherits:ActiveRecord.Migration
+Song	app/models/song.rb	/^class Song < ApplicationRecord$/;"	c	inherits:ApplicationRecord
+SongTest	test/models/song_test.rb	/^class SongTest < ActiveSupport::TestCase$/;"	c	inherits:ActiveSupport.TestCase
+Songmap	config/application.rb	/^module Songmap$/;"	m
+SongsController	app/controllers/songs_controller.rb	/^class SongsController < ApplicationController$/;"	c	inherits:ApplicationController
+SongsControllerTest	test/controllers/songs_controller_test.rb	/^class SongsControllerTest < ActionDispatch::IntegrationTest$/;"	c	inherits:ActionDispatch.IntegrationTest
+SongsHelper	app/helpers/songs_helper.rb	/^module SongsHelper$/;"	m
+SongsTest	test/system/songs_test.rb	/^class SongsTest < ApplicationSystemTestCase$/;"	c	inherits:ApplicationSystemTestCase
+TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	class:ActiveSupport
+address	app/models/song.rb	/^    def address$/;"	f	class:Song
+address_changed?	app/models/song.rb	/^  def address_changed?$/;"	f	class:Song
+change	db/migrate/20180211125039_create_songs.rb	/^  def change$/;"	f	class:CreateSongs
+change	db/migrate/20180211180258_add_adress_to_songs.rb	/^  def change$/;"	f	class:AddAdressToSongs
+change	db/migrate/20180211181711_add_coordinates_to_songs.rb	/^  def change$/;"	f	class:AddCoordinatesToSongs
+change	db/migrate/20180211194701_change_data_type_for_artist.rb	/^  def change$/;"	f	class:ChangeDataTypeForArtist
+change	db/migrate/20180212153241_add_songurlto_song.rb	/^  def change$/;"	f	class:AddSongurltoSong
+change	db/migrate/20180217111201_remove_detailsfrom_song.rb	/^  def change$/;"	f	class:RemoveDetailsfromSong
+create	app/controllers/songs_controller.rb	/^  def create$/;"	f	class:SongsController
+index	app/controllers/songs_controller.rb	/^  def index$/;"	f	class:SongsController
+song_params	app/controllers/songs_controller.rb	/^    def song_params$/;"	f	class:SongsController
+valid_address?	app/models/song.rb	/^  def valid_address?$/;"	f	class:Song
+valid_song?	app/models/song.rb	/^  def valid_song?$/;"	f	class:Song

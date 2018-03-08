@@ -5,15 +5,16 @@ document.addEventListener("turbolinks:load", function() {
     var map = new GMaps({
         div: '#map',
         lat: 38.5816,
-        lng: -121.4944
-        // markerClusterer: function(map) {
-        //     options = {
-        //       gridSize: 40
-        //     }
+        lng: -121.4944,
+        markerClusterer: function(map) {
+            options = {
+              gridSize: 40
+            }
    
-        //     return new MarkerClusterer(map, [], options);
-        //   }
-    });
+            return new MarkerClusterer(map, [], options);
+          }
+        });
+   
 
 
     var songs = JSON.parse(document.querySelector("#map").dataset.songs);
@@ -44,7 +45,6 @@ document.addEventListener("turbolinks:load", function() {
         imagePath: '../../../assets/images'
     };
   
-    // var markerCluster = new MarkerClusterer(map, markers, options);
 
 });
 
