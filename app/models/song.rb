@@ -20,7 +20,7 @@ class Song < ApplicationRecord
 
   def valid_address?
     if latitude.blank? || longitude.blank?
-      errors.add(:address, "We couldn't find the address on Google Maps. Please note that you have to write both city and country name in English. And please try again, Google seems to be moody at times with looking up addresses.")
+      errors.add(:address, "We couldn't find the address on Google Maps. Please note that you have to write street, city and country name in English (e.g. no 'umlaut'). And please try again, Google seems to be moody at times with looking up addresses.")
       return false
     else
       return true
