@@ -9,3 +9,4 @@
 
 
 require('./maps')
+require('./maps/newmarkers.js')

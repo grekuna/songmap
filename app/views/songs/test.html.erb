@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div >
+  <h2 class="flash"><%= flash[:error] unless flash[:error].blank? %></h2>
+</div>
+
+<div class="white">
+  <h1 style="font-family: 'Amatic SC'">Songmap <%= image_tag("logo.png", height: "70px") %> </h1>
+
+  <p style="font-family:Courier New, Courier, monospace ">Thousands of songs have been written about streets, landmarks, neighbourhoods or cities. This map locates the places that inspired the songwriters. 
+    Enjoy the music by clicking on the markers or explore the places using Google Street View </p>
+
+    
+    
+  <p><i class='fa fa-exclamation-triangle'></i>Log into Spotify to listen to the full tracks</p>
+
+
+  <br>
+</div>
+<div style="height: 10px"></div>
+
+<%= tag.div nil, id: 'map2', data: { songs: @songs.to_json(methods: [:address])}  %>
+<div style="height: 10px"></div>
+
+
+<div class="white">
+  <h3>Add your Song!</h3>
+  <p> Is your favorite song missing? Please add it!</p>
+  <%= render 'form', song: @song %>
+</div>
+
+<div style="height: 10px"></div>
+<div class="white bottom">
+  <p style="font-size: 12px;"> This app is made available under a GNU AGPLv3, see source on <a href="https://github.com/grekuna/songmap"><i class='fa fa-github'></i></p>
+</div>
+<div style="height: 10px"></div>
+
+
+

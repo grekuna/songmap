@@ -9,6 +9,13 @@ class SongsController < ApplicationController
   end
 
 
+  def test
+    @songs = Song.all
+    @song = Song.new
+
+  end
+
+
 
 
   # POST /songs
